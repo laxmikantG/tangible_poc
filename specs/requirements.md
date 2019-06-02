@@ -139,26 +139,26 @@
 
 |Type |ROUTE | METHOD | PARAMS| RESPONSE| DESCRIPTION|
 | ---- | ----  |----   | ----| ----| ----|
-|Users |/users | GET   | - | Returns users.html with list of uesrs |  List all users |
+|**Users** |/users | GET   | - | Returns users.html with list of uesrs |  List all users |
 ||/users/create/| GET| - | Returns ui for Create User Template | Creates User in the database|
 ||/users/create/| POST|First Name, Last Name, Email, Password | Returns ui for Register User Template  | User getting created in the system|
 ||/users/edit/ | GET| - |   Returns ui for Edit User Template | Renders the UI to edit User details|
 ||/users/edit/ | POST| First Name, Last Name, Password |   Returns ui for Edit User Template | Allows to edit User details|  
 ||/users/delete/| POST| Email | Deletes the User from AJAX on /users ui | Deletes the user from the system|
-| Cases|/cases/|GET| - | Returns cases.html with list of all cases| Lists all the available cases|
+| **Cases**|/cases/|GET| - | Returns cases.html with list of all cases| Lists all the available cases|
 | | /case/new/ |GET| Case Title, Multi-ple Options to select the Sets  | Returns new_case.html containing fields for PARAMS| Renders the HTML for new case creation|
 | | /case/new/ |POST| - | Returns new_case.html containing with result| Creates a new Case in the system |
 | | /case/edit/ |GET| - | Returns edit_case.html containing fields for PARAMS| Creates a new Case in the system |
-|Sets | /sets/|GET|-| List all the available 5 Sets in sets.html | Shows Modular sets available in the system| 
-|/set/ or /Set/register| GET | - | Render a template register_set.html | UI to Register a new set in the System|
-|/set/ or /Set/register| POST | Set name, description, multiple options for instruments, Instructions, image | Show results on register_set.html | Registers a new set in the System|
-|/set/edit| GET | Set name, description, multiple options for instruments, Instructions, image | Returns edit_set.html containing fields for PARAMS | Allows to edit a new set in the System|
-|/set/edit| POST | Set name, description, multiple options for instruments, Instructions, image | Show results on edit_set.html | Edits a set in the System|
-|Instruments | /instruments/|GET|-| List all the available instruments in instruments.html | Shows Modular set's instruments available in the system| 
-|/instrument/ or /instruments/register| GET | - | Render a template register_instrument.html | UI to Register a new instrument in the System|
-|/instrument/ or /instruments/register| POST | Instru. name, description, Instructions/notes, image | Show results on register_set.html | Registers a new instrument in the System|
-|/instrument/edit| GET |Instru. name, description, Instructions/notes, image | Returns edit_instrument.html containing fields for PARAMS | Allows to edit a instrument in the System|
-|/instrument/edit| POST | Instru. name, description, Instructions/notes, image | Show results on edit_instrument.html | Edits a instrument in the System|
+|**Sets** | /sets/|GET|-| List all the available 5 Sets in sets.html | Shows Modular sets available in the system| 
+| |/set/ or /Set/register| GET | - | Render a template register_set.html | UI to Register a new set in the System|
+| |/set/ or /Set/register| POST | Set name, description, multiple options for instruments, Instructions, image | Show results on register_set.html | Registers a new set in the System|
+| |/set/edit| GET | Set name, description, multiple options for instruments, Instructions, image | Returns edit_set.html containing fields for PARAMS | Allows to edit a new set in the System|
+| |/set/edit| POST | Set name, description, multiple options for instruments, Instructions, image | Show results on edit_set.html | Edits a set in the System|
+|**Instruments** | /instruments/|GET|-| List all the available instruments in instruments.html | Shows Modular set's instruments available in the system| 
+| |/instrument/ or /instruments/register| GET | - | Render a template register_instrument.html | UI to Register a new instrument in the System|
+| |/instrument/ or /instruments/register| POST | Instru. name, description, Instructions/notes, image | Show results on register_set.html | Registers a new instrument in the System|
+| |/instrument/edit| GET |Instru. name, description, Instructions/notes, image | Returns edit_instrument.html containing fields for PARAMS | Allows to edit a instrument in the System|
+| |/instrument/edit| POST | Instru. name, description, Instructions/notes, image | Show results on edit_instrument.html | Edits a instrument in the System|
 
 
 
