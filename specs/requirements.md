@@ -21,9 +21,11 @@
   * for PoC purposes, we will only focus on 1 to 6
 
 ### Out of  scope
-    * MRP & Inventory Management System
-    * Billing System
-    * Anything that is not defined in In-Scope
+
+   * MRP & Inventory Management System
+   * Billing System
+   * Anything that is not defined in In-Scope
+
 
 ### Understanding/Assumptions
    The SYNTHES® Modular Hand System provides implants and instruments specifically designed for fractures, replantations and                reconstruction of the hand.
