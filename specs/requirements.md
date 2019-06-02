@@ -177,17 +177,7 @@
 |API End Point URL | `/recognise/instrument/`|
 |----|---|
 |METHOD  **GET** | UI Shows the first instrument with rounding box around it along with its details as per the each instrument Validated and predicted on given image against trained model and displays the result accordingly on the UI including details of the given instrument.|
-|PARAMS | ```
-{
-  instrument_id: <A Unique Instrument ID>,
-  'instrument_name': <An Instrument Name>,
-  'description': <Instrument Description>,
-  'Type': <Instrument Type>,
-  'message' : 'Relevant Success message such as "Set Identified as - Modular Hand 1.5mm set", etc',
-  'status': 'Status of the result/ True or False,
-  'error': 'Error if any' 
-
-}```|
+|PARAMS | ```{"instrument_id": "<A Unique Instrument ID>", "instrument_name": "<An Instrument Name>", "description": "<Instrument Description>", "Type": "<Instrument Type>"}```|
 
 
 ### Deployement Architecture/Suggestion
