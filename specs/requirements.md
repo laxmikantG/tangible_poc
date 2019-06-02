@@ -162,31 +162,22 @@
 
 
 
-Two Main APIs 
+#### Two Main APIs 
 
-/recognise/set/
-
-GET - Shows the UI to upload a captured image/captures a set image
-POST - Validates and predicts reesult on given image against trained model and displays the result accordingly on the UI including details of the given Set.
-
-Params - Image with Set
-
-Response : {
-  'set_id': <Unique Set Identified>,
-  'set_name': <Unique Set Name as per the database>,
-  'case_id': <All the available case ids for the set>,
-  'description': <Description of the Given Set>,
-  'message' : 'Relevant Success message such as "Set Identified as - Modular Hand 1.5mm set", etc',
-  'status': 'Status of the result/ True or False,
-  'error': 'Error if any' 
-}
+|API End Point URL | `/recognise/set/`|
+|----|---|
+|METHOD  **GET** | Shows the UI to upload a captured image/captures a set image|
+|METHOD **POST**| Validates and predicts reesult on given image against trained model and displays the result accordingly on the UI including details of the given Set.|
+|PARAMS in POST call| image_set - Captured image of a Modular Set|
+|RESPONSE| `{'set_id': <Unique Set Identified>, 'set_name': <Unique Set Name as per the database>, 'case_id': <All the available case ids for the set>, 'description': <Description of the Given Set>, 'message' : 'Relevant Success message such as "Set Identified as - Modular Hand 1.5mm set", etc', 'status': 'Status of the result/ True or False, 'error': 'Error if any' }`|
 
 
-If the system identifies correct Set, then it will display each instrument on set.
-/recognise/instrument/
-GET - UI Shows the first instrument with rounding box around it along with its details as per the each instrument Validated and predicted on given image against trained model and displays the result accordingly on the UI including details of the given instrument.
+   If the system identifies correct Set, then it will display each instrument on set.
 
-Params: 
+|API End Point URL | `/recognise/instrument/`|
+|----|---|
+|METHOD  **GET** | UI Shows the first instrument with rounding box around it along with its details as per the each instrument Validated and predicted on given image against trained model and displays the result accordingly on the UI including details of the given instrument.|
+|PARAMS | ```
 {
   instrument_id: <A Unique Instrument ID>,
   'instrument_name': <An Instrument Name>,
@@ -196,17 +187,17 @@ Params:
   'status': 'Status of the result/ True or False,
   'error': 'Error if any' 
 
-}
+}```|
 
 
-# Deployement Architecture/Suggestion
+### Deployement Architecture/Suggestion
 
-# Deployment Instruction
+### Deployment Instruction
 
-# Running Tests
+### Running Tests
 
-# Aknowlwdgements 
+### Aknowlwdgements 
 
-# Authors 
+### Authors 
 
-# License
+### License
