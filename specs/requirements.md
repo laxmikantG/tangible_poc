@@ -25,70 +25,71 @@
     * Billing System
     * Anything that is not defined in In-Scope
 
-# Understanding/Assumptions
+### Understanding/Assumptions
    The SYNTHES® Modular Hand System provides implants and instruments specifically designed for fractures, replantations and                reconstruction of the hand.
    
   [Figure1 - A Modular Hand System]
   
-  • Modular Hand Systems Modules are also referred as Sets 
-  • Modular Hand System provides Modules for 1.0mm/1.3mm, 1.5mm, 2.0mm, and 2.4mm implants
-  • Each Set consists of differrent modules consisting of various tools such as Screws, Plates, 
+  * Modular Hand Systems Modules are also referred as Sets 
+  * Modular Hand System provides Modules for 1.0mm/1.3mm, 1.5mm, 2.0mm, and 2.4mm implants
+  * Each Set consists of differrent modules consisting of various tools such as Screws, Plates, 
     Instruments, Tray instruments and Addition (We will refer 'instrument' for each of them as a generic term)  
-  • Each instrument comes in various dimensions as per the Phalanges and Carpals
+  * Each instrument comes in various dimensions as per the Phalanges and Carpals
   
-   • Available Instruments 
-      - Screws
+  * Available Instruments 
+     - Screws
         * Screws in the Modular Hand System
         * Self-tapping flutes
         * Low profile screw head
-      - Plates
+     - Plates
         * T-Plates
         * Straight Plates
         * Straight LC-DC Plates
         * Extended H-Plates
         * Y-Plates
         * Condylar Plates/a 1.8mm Buttress Pin for the Condylar Plate 2.4
-      - Instruments
+     - Instruments
         * Drill bits
         * countersinks
         * screwdriver shafts
-      • These instruments are colour-coded for easy recognition to correspond to the screw size.
-      - Tray Instruments 
-        • Bending and Cutting Pliers
-        • Elevators and Retractors
-        • Universal Drill Guides
-        • Double Drill Sleeves
-        • Depth Gauges
-        • Screwdrivers
-        • Forceps
-      - Additional SYNTHES® products for treatment of the wrist and hand:
+     * These instruments are colour-coded for easy recognition to correspond to the screw size.
+     - Tray Instruments 
+        * Bending and Cutting Pliers
+        * Elevators and Retractors
+        * Universal Drill Guides
+        * Double Drill Sleeves
+        * Depth Gauges
+        * Screwdrivers
+        * Forceps
+     - Additional SYNTHES® products for treatment of the wrist and hand:
         * Wrist Fusion Plate
         * 3.0mm Cannulated Screw with Threaded Washer
         * Distal Radius Plate
-    - Separate Image has been provided for each instrument belongs to Modular Hand System Modules
-      along with their dimensions and quantity in set.
-    - Also Includes items for DPW (DPW = Don’t Pack Without.) i.e Dont pack the set without these instruments.
+     - Separate Image has been provided for each instrument belongs to Modular Hand System Modules
+       along with their dimensions and quantity in set.
+     - Also Includes items for DPW (DPW = Don’t Pack Without.) i.e Dont pack the set without these instruments.
 
 
-# Architecture Diagrams
+### Architecture Diagrams
 
   1. Technical Architecture
   2. Client-Server Technology Stack 
   3. ML Model Pipe line.
   4. User Flow Diagram 
 
-# DB Tables 
-As User Story suggests,
--- End User will login to the System, So User-Registration is required
--- He will register Patients/Cases, So patients db is required 
--- For each cases, there could be multiple Sets - Set Registration is required 
--- Each Set has multiple instruments, so separate table for instruments is required
--- A Table to record user tests and their results, which can be used to achieve more accuracy in future.
+### DB Tables 
+  As User Story suggests,
+  - End User will login to the System, So User-Registration is required
+  - He will register Patients/Cases, So patients db is required 
+  - For each cases, there could be multiple Sets - Set Registration is required 
+  - Each Set has multiple instruments, so separate table for instruments is required
+  - A Table to record user tests and their results, which can be used to achieve more accuracy in future.
 
-DB Tables --
-Django User Model (as well as Groups to manage user hierarchy if required )
+##### Table definitions:
 
-Patients/Cases Registration - Table Name - Patients
+- Django User Model (as well as Groups to manage user hierarchy if required )
+
+- Patients/Cases Registration - Table Name - Patients
   Fields - Type - Description 
   1. case_id - Text - A unique uuid/guid for each case
   2. case - Text - Information about patient/case/surgery etc.
@@ -100,7 +101,7 @@ Patients/Cases Registration - Table Name - Patients
   7. Gender - Boolean/Integer -  Patient Gender -->
 
 
-Sets (Modular set)
+- Sets (Modular set)
   Fields - Type - Description 
   1. set_id - Text - A unique uuid/guid for each set
   2. set_name - Text - A set name 
@@ -110,7 +111,7 @@ Sets (Modular set)
   6. instruction - Text - Instuctions about setting up the partiicular set
   7. Captured Image Path (img_link) - Text/ImageField - to store Images of the given set
 
-Instruments 
+- Instruments 
   Fields - Type - Description 
   1. Instrument ID - Text - A unique Instrument ID 
   2. name - Text -  Instrument Name 
@@ -121,7 +122,7 @@ Instruments
   7. Captured Image Path (img_link) - Text/ImageField - to store Images of the given instrument
 
 
-Recognition Cases 
+- Recognition Cases 
   Fields - Type - Description 
   1. case_id - text - A unique ID for Recognition
   2. recognised - boolean - Recognised or not
@@ -130,9 +131,9 @@ Recognition Cases
   5. Recognised_Set - FK_Set - If recognised 
   6. Recognised_Instrument - FK_Instrument - If recognized
 
-Each table will contain follwing extra attributes 
-1. created - Created DateTime stamp in UTC
-2. modified - modified DateTime Stamp in UTC
+- Each table will contain follwing extra attributes 
+  1. created - Created DateTime stamp in UTC
+  2. modified - modified DateTime Stamp in UTC
 
 # Routes
 
