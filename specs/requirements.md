@@ -95,52 +95,62 @@
 - Django User Model (as well as Groups to manage user hierarchy if required )
 
 - Patients/Cases Registration - Table Name - Patients
-  Fields - Type - Description 
-  1. case_id - Text - A unique uuid/guid for each case
-  2. case - Text - Information about patient/case/surgery etc.
-  3. Sets  - FK_Sets - One to Many (With Django lets use Many to Many for a clean UI)  
-  4. sets_count - Integer - Number of Sets
-  Optional
-  <!-- 5. patient_name - Text - Name of the patient (Patient should be a separate table, but not required as of now)
-  6. Age - Text - Age of the patient
-  7. Gender - Boolean/Integer -  Patient Gender -->
+  
+  |Seq|Fields| DataType | Description |
+  |----|------|------|------|
+  |1.| case_id | Text | A unique uuid/guid for each case|
+  |2. |case | Text | Information about patient/case/surgery etc.|
+  |3. |Sets  | FK_Sets | One to Many (With Django lets use Many to Many for a clean UI)  |
+  |4. |sets_count | Integer | Number of Sets|
+  |5.| patient_name | Text | (optional) Name of the patient (Patient should be a separate table, but not required as of now)|
+  |6. |Age | Text | (optional)Age of the patient|
+  |7.| Gender | Boolean/Integer | (optional) Patient Gender |
 
 
 - Sets (Modular set)
-  Fields - Type - Description 
-  1. set_id - Text - A unique uuid/guid for each set
-  2. set_name - Text - A set name 
-  3. description - Text - Description about the set
-  4. instruments  - FK_Instrument - One to Many (With Django lets use Many to Many for a clean UI)
-  5. qunatity - Integer - FK_Instrument_quantity
-  6. instruction - Text - Instuctions about setting up the partiicular set
-  7. Captured Image Path (img_link) - Text/ImageField - to store Images of the given set
+
+  |Seq|Fields| DataType | Description |
+  |----|------|------|------|
+  |1.| set_id| Text | A unique uuid/guid for each set|
+  |2. |set_name |Text |A set name |
+  |3. |description | Text | Description about the set|
+  |4. |instruments  | FK_Instrument | One to Many (With Django lets use Many to Many for a clean UI)|
+  |5. |qunatity -|Integer | FK_Instrument_quantity|
+  |6. |instruction | Text | Instuctions about setting up the partiicular set|
+  |7. |Captured Image Path (img_link)| - Text/ImageField |- to store Images of the given set|
 
 - Instruments 
-  Fields - Type - Description 
-  1. Instrument ID - Text - A unique Instrument ID 
-  2. name - Text -  Instrument Name 
-  3. Type - Text -  Instrument Type 
-  4. DPW - Boolean/Int - Dont pack without - Yes/No
-  5. Catalog No. - Text - Catalog Number 
-  6. Description - Text - Other required details.
-  7. Captured Image Path (img_link) - Text/ImageField - to store Images of the given instrument
+
+  |Seq|Fields| DataType | Description |
+  |----|------|------|------| 
+  |1. |Instrument ID | Text | A unique Instrument ID |
+  |2. |name | Text |  Instrument Name |
+  |3. |Type | Text |  Instrument Type |
+  |4. |DPW | Boolean/Int | Dont pack without - Yes/No|
+  |5. |Catalog No. | Text | Catalog Number |
+  |6. |Description | Text | Other required details.|
+  |7. |Captured Image Path (img_link) | Text/ImageField - to store Images of the given instrument|
 
 
 - Recognition Cases 
-  Fields - Type - Description 
-  1. case_id - text - A unique ID for Recognition
-  2. recognised - boolean - Recognised or not
-  3. image_path - uploaded image path
-  4. Errors/Issues - Text - Details about the errors or issue if any
-  5. Recognised_Set - FK_Set - If recognised 
-  6. Recognised_Instrument - FK_Instrument - If recognized
+
+  |Seq|Fields| DataType | Description |
+  |----|------|------|------| 
+  |1. |case_id | text | A unique ID for Recognition|
+  |2. |recognised | boolean | Recognised or not|
+  |3. |image_path |uploaded image path|
+  |4. |Errors/Issues | Text | Details about the errors or issue if any|
+  |5. |Recognised_Set | FK_Set | If recognised |
+  |6. |Recognised_Instrument | FK_Instrument - If recognized|
 
 - Each table will contain follwing extra attributes 
-  1. created - Created DateTime stamp in UTC
-  2. modified - modified DateTime Stamp in UTC
 
-# Routes
+  |Seq|Fields| DataType | Description |
+  |----|------|------|------| 
+  |1.| created | Created DateTime stamp in UTC|
+  |2. |modified| modified DateTime Stamp in UTC|
+
+### Routes
 
 |Type |ROUTE | METHOD | PARAMS| RESPONSE| DESCRIPTION|
 | ---- | ----  |----   | ----| ----| ----|
