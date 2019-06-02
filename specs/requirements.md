@@ -138,6 +138,7 @@
 # Routes
 
 |Type |ROUTE | METHOD | PARAMS| RESPONSE| DESCRIPTION|
+| ---- | ----  |----   | ----| ----| ----|
 |Users |/users | GET   | - | Returns users.html with list of uesrs |  List all users |
 ||/users/create/| GET| - | Returns ui for Create User Template | Creates User in the database|
 ||/users/create/| POST|First Name, Last Name, Email, Password | Returns ui for Register User Template  | User getting created in the system|
