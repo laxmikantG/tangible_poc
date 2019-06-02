@@ -28,7 +28,7 @@
 ### Understanding/Assumptions
    The SYNTHES® Modular Hand System provides implants and instruments specifically designed for fractures, replantations and                reconstruction of the hand.
    
-  [Figure1 - A Modular Hand System]
+  ![Figure1 - A Modular Hand System](https://i.imgur.com/Nz53u6c.png)
   
   * Modular Hand Systems Modules are also referred as Sets 
   * Modular Hand System provides Modules for 1.0mm/1.3mm, 1.5mm, 2.0mm, and 2.4mm implants
