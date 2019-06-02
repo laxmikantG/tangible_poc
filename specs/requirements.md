@@ -75,9 +75,12 @@
   1. Technical Architecture
   2. Client-Server Technology Stack 
   3. ML Model Pipe line.
-  TODO: - Diagram needs to be cleaned
-  [3 Technical Architectures](https://imgur.com/6ly6D35)
-  4. User Flow Diagram 
+  **TODO: - Diagram needs to be cleaned**
+  
+  ![Imgur](https://i.imgur.com/6QA7enn.jpg)
+  
+  4. User Flow Diagram (Yet to prepare)
+  
 
 ### DB Tables 
   As User Story suggests,
